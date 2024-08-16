@@ -41,6 +41,7 @@ namespace ImmichFrame.Models
         public List<Guid> Albums { get; set; } = new List<Guid>();
         public List<Guid> ExcludedAlbums { get; set; } = new List<Guid>();
         public List<Guid> People { get; set; } = new List<Guid>();
+        public bool ShowOtherPhotosInAlbumWithPeople { get; set; } = false;
         [JsonIgnore]
         public bool UseImmichFrameAlbum => !string.IsNullOrWhiteSpace(ImmichFrameAlbumName);
         public string ImmichFrameAlbumName { get; set; } = string.Empty;
@@ -229,6 +230,7 @@ namespace ImmichFrame.Models
                             throw new SettingsNotValidException($"Value of '{SettingsValue.Key}' is not valid. ('{value}')");
                         property.SetValue(settings, intValue);
                         break;
+                    case "ShowOtherPhotosInAlbumWithPeople":
                     case "DownloadImages":
                     case "ShowMemories":
                     case "ShowClock":
@@ -316,6 +318,7 @@ namespace ImmichFrame.Models
                 Albums = new List<Guid>(),
                 ExcludedAlbums = new List<Guid>(),
                 People = new List<Guid>(),
+                ShowOtherPhotosInAlbumWithPeople = false,
                 ImmichFrameAlbumName = "",
                 ShowClock = true,
                 ClockFontSize = 48,

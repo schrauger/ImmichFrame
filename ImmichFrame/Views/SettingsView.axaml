@@ -139,108 +139,112 @@
 						</ItemsControl.ItemTemplate>
 					</ItemsControl>
 				</StackPanel>
+                <StackPanel>
+                    <TextBlock Text="ShowOtherPhotosInAlbumWithPeople"/>
+                    <CheckBox IsChecked="{Binding Settings.ShowOtherPhotosInAlbumWithPeople}" TabIndex="11"/>
+                </StackPanel>
 				<StackPanel>
 					<TextBlock Text="Interval"/>
-					<NumericUpDown Value="{Binding Settings.Interval}" KeyDown="NumericUpDown_KeyDown" TabIndex="11"/>
+					<NumericUpDown Value="{Binding Settings.Interval}" KeyDown="NumericUpDown_KeyDown" TabIndex="12"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="TransitionDuration"/>
-					<NumericUpDown Value="{Binding Settings.TransitionDuration}" KeyDown="NumericUpDown_KeyDown" TabIndex="12"/>
+					<NumericUpDown Value="{Binding Settings.TransitionDuration}" KeyDown="NumericUpDown_KeyDown" TabIndex="13"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="DownloadImages"/>
-					<CheckBox IsChecked="{Binding Settings.DownloadImages}" TabIndex="13"/>
+					<CheckBox IsChecked="{Binding Settings.DownloadImages}" TabIndex="14"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ShowMemories"/>
-					<CheckBox IsChecked="{Binding Settings.ShowMemories}" TabIndex="14"/>
+					<CheckBox IsChecked="{Binding Settings.ShowMemories}" TabIndex="15"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="RenewImagesDuration"/>
-					<NumericUpDown Value="{Binding Settings.RenewImagesDuration}" KeyDown="NumericUpDown_KeyDown" TabIndex="15"/>
+					<NumericUpDown Value="{Binding Settings.RenewImagesDuration}" KeyDown="NumericUpDown_KeyDown" TabIndex="16"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="Margin"/>
 					<Grid ColumnDefinitions="*,Auto">
-						<TextBox Grid.Column="0" Text="{Binding Settings.Margin}"  TabIndex="16"/>
-						<Button Grid.Column="1" Content="Apply" Command="{Binding TestMarginCommand}"  TabIndex="17"/>
+						<TextBox Grid.Column="0" Text="{Binding Settings.Margin}"  TabIndex="17"/>
+						<Button Grid.Column="1" Content="Apply" Command="{Binding TestMarginCommand}"  TabIndex="18"/>
 					</Grid>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ShowClock"/>
-					<CheckBox IsChecked="{Binding Settings.ShowClock}" TabIndex="18"/>
+					<CheckBox IsChecked="{Binding Settings.ShowClock}" TabIndex="19"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ImmichFrameAlbumName (must be unique per device!)"/>
-					<TextBox Text="{Binding Settings.ImmichFrameAlbumName}" Watermark="Save last 100 displayed items to this album on server" TabIndex="19"/>
+					<TextBox Text="{Binding Settings.ImmichFrameAlbumName}" Watermark="Save last 100 displayed items to this album on server" TabIndex="20"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ClockFontSize"/>
-					<NumericUpDown Value="{Binding Settings.ClockFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="20"/>
+					<NumericUpDown Value="{Binding Settings.ClockFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="21"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ClockFormat"/>
-					<TextBox Text="{Binding Settings.ClockFormat}" TabIndex="21"/>
+					<TextBox Text="{Binding Settings.ClockFormat}" TabIndex="22"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ShowPhotoDate"/>
-					<CheckBox IsChecked="{Binding Settings.ShowPhotoDate}" TabIndex="22"/>
+					<CheckBox IsChecked="{Binding Settings.ShowPhotoDate}" TabIndex="23"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="PhotoDateFontSize"/>
-					<NumericUpDown Value="{Binding Settings.PhotoDateFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="23"/>
+					<NumericUpDown Value="{Binding Settings.PhotoDateFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="24"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="PhotoDateFormat"/>
-					<TextBox Text="{Binding Settings.PhotoDateFormat}" TabIndex="24"/>
+					<TextBox Text="{Binding Settings.PhotoDateFormat}" TabIndex="25"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ShowImageDesc"/>
-					<CheckBox IsChecked="{Binding Settings.ShowImageDesc}" TabIndex="25"/>
+					<CheckBox IsChecked="{Binding Settings.ShowImageDesc}" TabIndex="26"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ImageDescFontSize"/>
-					<NumericUpDown Value="{Binding Settings.ImageDescFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="26"/>
+					<NumericUpDown Value="{Binding Settings.ImageDescFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="27"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ShowImageLocation"/>
-					<CheckBox IsChecked="{Binding Settings.ShowImageLocation}" TabIndex="27"/>
+					<CheckBox IsChecked="{Binding Settings.ShowImageLocation}" TabIndex="28"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ImageLocationFontSize"/>
-					<NumericUpDown Value="{Binding Settings.ImageLocationFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="28"/>
+					<NumericUpDown Value="{Binding Settings.ImageLocationFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="29"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="FontColor"/>
-					<TextBox Text="{Binding Settings.FontColor}" TabIndex="29"/>
+					<TextBox Text="{Binding Settings.FontColor}" TabIndex="30"/>
 				</StackPanel>
 				<StackPanel>
 					<HyperlinkButton Content="WeatherApiKey" NavigateUri="https://openweathermap.org/appid" />
-					<TextBox Text="{Binding Settings.WeatherApiKey}" Watermark="Click WeatherApiKey learn more" TabIndex="30"/>
+					<TextBox Text="{Binding Settings.WeatherApiKey}" Watermark="Click WeatherApiKey learn more" TabIndex="31"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="ShowWeatherDescription"/>
-					<CheckBox IsChecked="{Binding Settings.ShowWeatherDescription}" TabIndex="31"/>
+					<CheckBox IsChecked="{Binding Settings.ShowWeatherDescription}" TabIndex="32"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="WeatherFontSize"/>
-					<NumericUpDown Value="{Binding Settings.WeatherFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="32"/>
+					<NumericUpDown Value="{Binding Settings.WeatherFontSize}" KeyDown="NumericUpDown_KeyDown" TabIndex="33"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="UnitSystem"/>
-					<TextBox Text="{Binding Settings.UnitSystem}" TabIndex="33"/>
+					<TextBox Text="{Binding Settings.UnitSystem}" TabIndex="34"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="WeatherLatLong"/>
-					<TextBox Text="{Binding Settings.WeatherLatLong}" TabIndex="34"/>
+					<TextBox Text="{Binding Settings.WeatherLatLong}" TabIndex="35"/>
 				</StackPanel>
 				<StackPanel>
 					<TextBlock Text="Language"/>
-					<TextBox Text="{Binding Settings.Language}" TabIndex="35"/>
+					<TextBox Text="{Binding Settings.Language}" TabIndex="36"/>
 				</StackPanel>
         <StackPanel>
           <TextBlock Text="UnattendedMode"/>
-          <CheckBox IsChecked="{Binding Settings.UnattendedMode}" TabIndex="36"/>
+          <CheckBox IsChecked="{Binding Settings.UnattendedMode}" TabIndex="37"/>
         </StackPanel>
 				<Rectangle Height="600" Fill="Transparent" />
 			</StackPanel>
